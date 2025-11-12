@@ -1,0 +1,47 @@
+.social-link {
+  display: flex;
+  gap: 10px;
+}
+
+.social-link a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 15px;
+  color: #ffffff;
+  background: #26050F;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.social-link a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #FF014F;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: -1;
+
+}
+
+.social-link a:hover::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.social-link a:hover {
+  color: #ffffff;
+}
+
+
+
+
+
